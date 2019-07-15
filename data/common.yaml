@@ -1,1 +1,2 @@
 ---
+apache_test::install_ensure: 'present'
