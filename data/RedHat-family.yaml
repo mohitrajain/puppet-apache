@@ -1,3 +1,6 @@
 ---
 apache_test::install_name: 'httpd'
-apache_test::config_path: '/etc/httpd/conf/httpd.conf' 
+apache_test::config_path: '/etc/httpd/conf/httpd.conf'
+apache_test::vhosts_owner: 'apache'
+apache_test::vhosts_group: 'apache'
+apache_test::vhosts_dir: '/etc/httpd/conf.d' 

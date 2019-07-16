@@ -5,13 +5,14 @@
 class apache_test::install {
 
 # service should be installed
-  package { "${apache_test::install_name}":
+  package { "$apache_test::install_name":
     ensure => present,
   }
 
 # service should be running
-  service { "${apache_test::install_name}":
+  service { "$apache_test::install_name":
     ensure => 'running',
-    enable => true
+    enable => true,
+    alias  => 'apache_service'
   }
 }

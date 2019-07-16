@@ -9,6 +9,9 @@ class apache_test (
   String $install_ensure, 
   String $config_path,
   String $config_ensure,
+  String $vhosts_owner,
+  String $vhosts_group,
+  String $vhosts_dir,
 ) {
   contain apache_test::install
   contain apache_test::config
