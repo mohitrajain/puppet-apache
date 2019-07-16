@@ -7,6 +7,12 @@
 class apache_test (
   String $install_name,
   String $install_ensure, 
+  String $config_path,
+  String $config_ensure,
 ) {
-  include apache_test::install
+  contain apache_test::install
+  contain apache_test::config
+
+  Class['::apache_test::install']
+  -> Class['::apache_test::config']
 }
